@@ -1,0 +1,296 @@
+/* css resetter  */
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+	margin: 0;
+	padding: 0;                                        
+	font-size: inherit;
+	box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	font-family: 'Courier New', Courier, monospace;
+	position: relative;
+}
+
+body{
+	position: relative;
+}
+
+body::after{
+	content: '';
+	display: block;
+	height: 100px;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+img:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	transition: 3s;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*                  NAVBAR                  */
+
+.content {
+	max-width: 90%;
+	margin: auto;
+}
+
+.nav-bar {
+	z-index: 1000;
+	position: sticky;
+	top: 0px;
+	transition: top 0.3s;
+}
+
+.nav-bar-content {
+	padding: 2em;
+	backdrop-filter: grayscale(100%);
+	backdrop-filter: blur(10px);
+	background-color: rgba(255, 255, 255, 0.8);
+
+	/* border: 3px solid black; */
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-bar ul {
+	display: flex;
+	align-items: center;
+	margin-right: 20em;
+}
+
+.nav-bar li {
+	margin-left: 8em;
+	list-style: none;
+}
+
+.nav-bar a {
+	text-decoration: none;
+	color: black;
+}
+
+.nav-bar a:hover,
+.nav-bar a:focus {
+	font-size: 22px;
+	color: purple;
+	font-weight: 700;
+	transition: 300ms;
+}
+
+/*                     MAIN                    */
+
+
+h1 {
+	font-size: 5em;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: 400;
+}
+
+h1 span {
+	text-decoration: underline;
+}
+
+.titles {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Arial, Helvetica, sans-serif
+}
+
+.strong {
+	padding-right: 1em;
+}
+
+.features {
+	margin: 1rem;
+	display: flex;
+}
+
+.features h4 {
+	font-size: 20px;
+	text-transform: capitalize;
+	font-weight: bold;
+}
+
+.features p {
+	padding: 1em 1em 1em 0;
+}
+
+.f-organize {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	opacity: 75%;
+}
+
+/*                   FOOTER                         */
+
+.footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	min-width: 100vh;
+	height: 100px;
+	padding: 10px 0;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.footer .social {
+	text-align: center;
+	/* padding-bottom: 25px; */
+	color: #4b4c4d;
+}
+
+.footer .social a {
+	font-size: 24px;
+	color: inherit;
+	border: 1px solid #ccc;
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	margin: 0 8px;
+	opacity: 0.75;
+}
+
+.footer .social a:hover {
+	opacity: 0.9;
+}
+
+.footer .social i {
+	margin-top: 7px;
+}
+
+.footer ul {
+	margin-top: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	font-size: 18px;
+	/* line-height: 1.6; */
+	margin-bottom: 0;
+}
+
+.footer ul a {
+	color: inherit;
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+.footer ul li {
+	display: inline-block;
+	padding: 0 15px;
+}
+
+.footer ul a:hover {
+	opacity: 1;
+}
+
+.footer .copyright {
+	/* margin-top: 15px; */
+	text-align: center;
+	font-size: 13px;
+	color: #aaa;
+}
+
+/* Order button css */
+.quote-btn {
+	margin: 1em auto 2em;
+	padding: 30px 120px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;
+	border-radius: 10px;
+	display: block;
+	border: 0px;
+	font-size: 3em;
+	font-weight: 700;
+	box-shadow: 0px 0px 14px -7px #f09819;
+	background-image: linear-gradient(
+		45deg,
+		#ff512f 0%,
+		#f09819 51%,
+		#ff512f 100%
+	);
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.quote-btn:hover {
+	background-position: right center;
+	/* change the direction of the change here */
+	color: #fff;
+	text-decoration: none;
+}
+
+.quote-btn:active {
+	transform: scale(0.95);
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

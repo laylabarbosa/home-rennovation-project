@@ -9,10 +9,13 @@
 
     <meta name="author" content="Layla de Souza Barbosa, Lizandra Esterque, Neguin " />
     <meta name="description" content="A webpage for a rennovation company as a final requirement for Interface design using CSS">
-	<!-- add the logo here  -->
-    <link rel="shortcut icon" href= "" type="image/x-icon" /> 
+	
+    <!-- shortcut icon  -->
+    <link rel="shortcut icon" href= "images/logo.jpeg" type="image/x-icon" /> 
+    
     <!-- link of my css file -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 
     
     
@@ -21,7 +24,7 @@
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- outside Javascript library to inlcude the header and footer files -->
+    <!-- outside Javascript library to include the header and footer files -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -39,35 +42,59 @@
 
 <body>
     
-    <!-- header with logo, navbar and some button -->
-    <div id="header"></div>
+    <!-- header with logo and navbar -->
     
-
+    
+    <div id="header"></div>
+    <main>
+        <div class="slideshow-container">
+            
+            <div class="mySlides fade">
+                <img src="images/carousel/bathroom1.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/carousel/kitchen1.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/carousel/bathroom2.jpeg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/carousel/kitchen2.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/carousel/bathroom3.jpeg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/carousel/kitchen3.jpg" style="width:100%">
+            </div>
+            
+        </div>
+        <br>
+        
     <div class="content">
-
-        <main>
-            <h1 class="titles">FlipHouse Home Rennovations</h1>
-            <h2 class="titles">Renovating homes in Toronto for 30 years</h2>
-
+            <h1 class="titles">FlipHouse Home Renovations</h1>
+            <h2 class="titles">Renovating homes in Toronto for over 30 years</h2>
+            
             <section>
-                
-
-                        <!-- add image carousel  -->
-
-                        <!-- content paragraph one -->
-
-                        <!-- add call to action with link to quote -->
-
-                        <!-- add paragraph all about details and image of couple planning  -->
-                    
+                        
             </section>
-
-            <section>
-                
                     
-            </section>
+                    <section>
+                <!-- content paragraph one -->
 
+                <!-- add call to action with link to quote -->
+
+                
+                
+            </section>
+            
             <section class="quote">
+                <!-- add paragraph all about details and image of couple planning  -->
                 <button id="quote-btn" class="quote-btn" role="button">Get a quote now</button>
             </section>
         </main>
@@ -85,6 +112,7 @@
             location.href = "contact.html"
         }
     </script>
+    <script src="javascript/index.js"></script>
 </body>
 
 </html>

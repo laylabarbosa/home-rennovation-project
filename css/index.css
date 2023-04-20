@@ -1,0 +1,29 @@
+/*       SLIDESHOW     */
+.slideshow-container {
+	max-width: 100%;
+    height: 100px;
+	position: relative;
+    z-index: -1;
+	margin: auto;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+      from {opacity: .2} 
+      to {opacity: 1;
+        transform: scale(1.1);
+        transition: 3s}
+}
+    
+/* CONTENT  */
+
+.titles {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+      
+}
+ 

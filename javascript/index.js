@@ -1,11 +1,15 @@
-const sendBtn = document.querySelector('#contact');
-const order = document.querySelector('#order');
+let slideIndex = 0;
+showSlides();
 
-sendBtn.addEventListener('click', () => {
-	order.innerHTML = `
-          <i class="fas fa-heart"></i><br>
-          <strong>Your request was registered!</strong>
-          <p>We'll be in contact soon, please keep your <strong>method of payment</strong> and <strong> documents</strong> in hand.</p>
-          <button type=button onclick="location.href='index.html';" id ="contact" > Return to Home page" </button>
-      `;
-});
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3000); // Change image every 2.5 seconds
+}

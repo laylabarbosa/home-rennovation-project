@@ -6,21 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="author" content="Layla de Souza Barbosa, Lizandra Esterque, Neguin " />
+    <meta name="author" content="Layla de Souza Barbosa, Lizandra Esterque, Negin Yazdandoust ">
     <meta name="description" content="A webpage for a rennovation company as a final requirement for Interface design using CSS">
 	
     <!-- shortcut icon  -->
-    <link rel="shortcut icon" href= "images/logo.jpeg" type="image/x-icon" /> 
+    <link rel="shortcut icon" href= "images/logo.jpeg" type="image/x-icon"> 
+
+     <!-- link google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Poltawski+Nowy:ital,wght@1,600&family=Ysabeau:wght@500&display=swap" rel="stylesheet">
      
     <!-- link of my css file -->
     <link rel="stylesheet" href="css/style.css">
-
-    
+    <link rel="stylesheet" href="css/product.css">
     
     <!-- link to get the all the social media footer icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- outside Javascript library to inlcude the header and footer files -->
     <script
@@ -33,8 +37,8 @@
             $("#header").load("includes/header.html"); 
             $("#footer").load("includes/footer.html"); 
         });
+        
     </script> 
-  
     <title>Products</title>
 </head>
 
@@ -42,24 +46,67 @@
     <div class="reviewBody">
         <!-- header with logo, navbar and some button -->
         <div id="header"></div>
-
-        
         <main>
-            <div class="content">
-                <h1 class="titles">See our projects and get inspired</h1>
+            <div class="content">                
+
+                <h1 class="titles">Be inspired by our projects...</h1>
+                <section class="services" >
+                    <h3>Our services</h3>
+                    <p> We offer a wide range of services to help homeowners upgrade their living spaces. From drywall installation and repair to painting, electrical work, plumbing, flooring installation, and carpentry, 
+                        we have the expertise and resources to handle all your renovation needs. We understand that every home is unique, 
+                        which is why we work closely with our clients to understand their needs and preferences.</p>
+                </section>
+
+                <h2 class="titles">Kitchen</h2>
                 <div id="panel" class="panel-container">
-                    <!-- add bathroom and kitchen before/after pictures  -->
-                    <!-- use css to make them bigger on hover -->
-                    <!-- add css animation for clickbait directing people to quote page  -->
+                        <div class="arrow-wrapper">
+                            <button onclick="changeKitchen('prev')"><img class="arrow prevArrow" src="images/arrowrleft.png" alt="arrow"></button>
+                        </div>
+                        <div class="image-wrapper">
+                            <img id="myKitchen" src="images/p-kitchen/before_after.jpeg" alt="before and after pictures of renovated rooms">  
+                        </div>
+                        <div class="arrow-wrapper">
+                            <button onclick="changeKitchen('next')"><img class="arrow nextArrow" src="images/arrowrigth.png" alt="arrow"></button>
+                        </div>
                 </div>
+                <h2 class="titles">Bathroom</h2>
+                    <div id="panel" class="panel-container">
+                        <div class="arrow-wrapper">
+                            <button onclick="changeBath('prev')"><img class="arrow prevArrow" src="images/arrowrleft.png" alt="arrow"></button>
+                        </div>
+                        <div class="image-wrapper">
+                            <img id="myBath" src="images/p-bathroom/before_after3.jpg" alt="before and after pictures of renovated rooms">  
+                        </div>
+                        <div class="arrow-wrapper">
+                            <button onclick="changeBath('next')"><img class="arrow nextArrow" src="images/arrowrigth.png" alt="arrow"></button>
+                        </div>
+                    </div>
+                    <h2 class="titles">Whole House</h2>
+                    <div id="panel" class="panel-container">
+                            <div class="arrow-wrapper">
+                                <button onclick="changeHouse('prev')"><img class="arrow prevArrow" src="images/arrowrleft.png" alt="arrow"></button>
+                            </div>
+                            <div class="image-wrapper">
+                                <img id="myHouse" src="images/p-wholehouse/before_after1.jpg" alt="before and after pictures of renovated rooms">  
+                            </div>
+                            <div class="arrow-wrapper">
+                                <button onclick="changeHouse('next')"><img class="arrow nextArrow" src="images/arrowrigth.png" alt="arrow"></button>
+
+                            </div>
+                    </div>              
+                    <section class="action">
+                        <h2 class="titles">Ready to start?</h2>
+                        <p>So whether you're looking to upgrade your bathroom, kitchen, or your entire house, our renovation company is here to help. 
+                            Contact us today to schedule a consultation and let us help you bring your renovation dreams to life!</p>
+                        <button id="quote-btn" class="btn">Get a quote Now!</button>
+                  </section>
             </div>
         </main>
     </div>
-    
-    
+
     <div id="footer"></div>
-    <!-- change the javascript name if used  -->
-    <script src="javascript/review.js"></script>
+    <!-- embedded Javascript -->
+    <script src="javascript/product.js"></script>
 </body>
 
 </html>

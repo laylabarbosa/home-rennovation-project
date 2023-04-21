@@ -1,0 +1,137 @@
+/* Set the video as the background */
+.video-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+/* Style the form on top of the video */
+main {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 50px;
+  text-align: left;
+}
+
+form {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  width: 50%;
+}
+
+form label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  line-height: 10px;
+}
+
+form input,
+form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  display: block;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+}
+
+form button {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  background: white;
+}
+.btn:hover {
+  background:rgb(195, 195, 171);
+}
+.error {
+  display: none;
+  color: red;
+  font-size: 14px;
+}
+#submit-btn:hover + .error {
+  display: block;
+}
+::placeholder {
+  color: #cbc9c9; /* Change the color of the placeholder text */
+  font-style: italic; /* Add italic style to the placeholder text */
+}
+.region {
+  text-align:center;
+}
+
+.footer{
+    /* border: 5px solid red; */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  /* Modify the form width for smaller screens */
+  form {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Modify the padding and font-size for smaller screens */
+  main {
+    padding: 20px;
+  }
+  
+  form {
+    padding: 20px;
+  }
+  
+  form label {
+    font-size: 16px;
+  }
+  
+  form input,
+  form textarea {
+    font-size: 16px;
+  }
+  
+  form button {
+    font-size: 16px;
+  }
+}

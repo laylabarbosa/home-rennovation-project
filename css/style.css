@@ -22,17 +22,22 @@ html:focus-within {
 }
 
 /* Set core body defaults */
+html{
+	height: 100%;
+	box-sizing: border-box;
+}
 body {
 	min-height: 100vh;
+	margin: 0;
+	min-height: 100%;
+	padding-bottom: 6.74rem;
+	box-sizing: inherit;
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'PT Sans', sans-serif, 'Courier New', Courier, monospace;
 	position: relative;
 }
 
-body{
-	position: relative;
-}
 
 body::after{
 	content: '';
@@ -72,6 +77,8 @@ select {
 	max-width: 90%;
 	margin: auto;
 	padding-top: 5%;
+	/* padding-bottom: 100px; */
+
 }
 
 #navbar {
@@ -96,7 +103,7 @@ select {
 
 .nav-bar ul {
 	display: flex;
-	align-items: right;
+
 	margin-right: 20em;
 }
 
@@ -122,59 +129,36 @@ select {
 
 
 h1 {
-	font-size: 5em;
+	font-size: 6em;
 	font-weight: 400;
+	font-family: 'Poltawski Nowy', serif;
 }
 
 h2 {
 	font-size: 3em;
 	font-weight: 400;
+	font-family: 'Ysabeau', sans-serif;
 }
-
+h3{
+	font-family: Arial, Helvetica, sans-serif;;
+	font-size: 1em;
+  }
 .titles {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: Arial, Helvetica, sans-serif
+	color: white;
+    text-shadow: 2px 2px 5px black;
 }
 
-.strong {
-	padding-right: 1em;
-}
-
-/* .features {
-	margin: 1rem;
-	display: flex;
-}
-
-.features h4 {
-	font-size: 20px;
-	text-transform: capitalize;
-	font-weight: bold;
-}
-
-.features p {
-	padding: 1em 1em 1em 0;
-} */
-
-
-
-/* .f-organize {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	opacity: 75%;
-} */
 
 /*                   FOOTER                         */
 
 .footer {
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 0px;
-	min-width: 100vh;
-	height: 100px;
+	/* position: absolute; */
+  /* bottom: 0; */
+  width: 100%;
+	height: 150px;
 	padding: 10px 0;
 	background-color: rgba(255, 255, 255, 0.8);
 }
@@ -222,7 +206,6 @@ h2 {
 	list-style: none;
 	text-align: center;
 	font-size: 18px;
-	/* line-height: 1.6; */
 	margin-bottom: 0;
 }
 
@@ -242,16 +225,22 @@ h2 {
 }
 
 .footer .copyright {
-	/* margin-top: 15px; */
 	text-align: center;
 	font-size: 13px;
 	color: #aaa;
 }
 
-/* Order button css */
-.quote-btn {
-	margin: 1em auto 2em;
-	padding: 30px 120px;
+.footer p {
+	text-align: center;
+	font-size: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+/* button css */
+.btn {
+	margin: 1em auto 1em;
+	padding: 20px 20px;
 	text-align: center;
 	text-transform: uppercase;
 	transition: 0.5s;
@@ -260,9 +249,8 @@ h2 {
 	border-radius: 10px;
 	display: block;
 	border: 0px;
-	font-size: 3em;
+	font-size: 1em;
 	font-weight: 700;
-	box-shadow: 0px 0px 14px -7px #f09819;
 	background-image: linear-gradient(
 		45deg,
 		rgb(46, 157, 174) 0%,
@@ -271,18 +259,16 @@ h2 {
 	);
 	cursor: pointer;
 	user-select: none;
-	-webkit-user-select: none;
 	touch-action: manipulation;
 }
 
-.quote-btn:hover {
+.btn:hover {
 	background-position: right center;
-	/* change the direction of the change here */
 	color: #fff;
 	text-decoration: none;
 }
 
-.quote-btn:active {
+.btn:active {
 	transform: scale(0.95);
 }
 

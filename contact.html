@@ -6,21 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="author" content="Layla de Souza Barbosa, Lizandra Esterque, Neguin " />
+    <meta name="author" content="Layla de Souza Barbosa, Lizandra Esterque, Negin Yazdandoust">
     <meta name="description" content="A webpage for a rennovation company as a final requirement for Interface design using CSS">
 	
     <!-- shortcut icon  -->
-    <link rel="shortcut icon" href= "images/logo.jpeg" type="image/x-icon" /> 
+    <link rel="shortcut icon" href= "images/logo.jpeg" type="image/x-icon"> 
+
+    <!-- link google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Poltawski+Nowy:ital,wght@1,600&family=Ysabeau:wght@500&display=swap" rel="stylesheet">
    
     <!-- link of my css file -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
 
-    
-    
     <!-- link to get the all the social media footer icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- outside Javascript library to inlcude the header and footer files -->
     <script
@@ -41,21 +45,77 @@
 <body>
 
     <!-- header with logo, navbar and some button -->
-    <div id="header"></div>
-
-    <div class="content">
+    <main>
+        <div id="header"></div>
+        <div class="content">
         <!-- add backgroud video from assets folder -->
-        <main>
-            <form id="order" action="order.html" method="get">
+            <div class="video-background">
+                <video autoplay loop muted>
+                <source src="assets/AdobeStock_51747896.mp4" type="video/mp4">
+                </video>
+            </div>
+            <form id="order" action="order.html" method="post">
+                <h2 class="titles">Let's Get Started</h2>
+                <h3 class="titles">Get a quote</h3>
                 <!-- add form to get a quote or contact form  -->
+                <div>
+                    <label for="name">Name:</label><span>*</span>
+                    <input type="text" id="name" name="name" placeholder="Insert your Name..." required><br><br>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label><span>*</span>
+                    <input type="email" id="email" name="email" placeholder="Insert your Email..." required><br><br>
+                </div>
+
+                <div>
+                    <label for="phone">Phone no.:</label>
+                    <input type="tel" id="phone" name="phone" ><br><br>
+                </div>
+                <div class="region">
+                    <label>Select your Region:</label><br><br>
+                    <input type="radio" id="region1" name="region" value="Etobicoke" required>
+                    <label for="region1">Etobicoke</label>
+                    
+                    <input type="radio" id="region2" name="region" value="Scarborough">
+                    <label for="region2">Scarborough</label>
+                    
+                    <input type="radio" id="region3" name="region" value="York">
+                    <label for="region3">York</label>
+                    
+                    <input type="radio" id="region4" name="region" value="East York">
+                    <label for="region4">East York</label>
+
+                    <input type="radio" id="region5" name="region" value="North York">
+                    <label for="region5">North York</label>
+
+                    <input type="radio" id="region6" name="region" value="Toronto">
+                    <label for="region6">Toronto</label><br><br>
+                </div>   
+                <div>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Share with us your ideas for your dream home and let's work together to make it a reality!"></textarea><br><br>
+                </div>
+
+                <button type="submit" class="btn" id="submit-btn">Submit</button>
+                <p class="error" id="error-msg">Please enter your name and email.</p>
             </form>
-        </main>
-    </div>
-
+        </div>
+    </main>
     <div id="footer"></div>
-
-
-    <script src="javascript/order.js"></script>
+        <script>
+                    document.getElementById('submit-btn').addEventListener('click', function(e) {
+                         // Get form input values
+                        var name = document.getElementById('name').value;
+                        var email = document.getElementById('email').value;
+                      
+                        // Check if name and email are empty
+                        if (name.trim() === '' || email.trim() === '') {
+                         e.preventDefault(); // prevent form submission
+                        alert('Please enter your Name and Email.'); // show error message
+                        }
+                    });
+        </script>
 </body>
 
 </html>
